@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sami Bousrih – Full-Stack Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#E4E9EF;--ink:#14213D;--mute:#44546f;--line:#b4c0d0;--link:#B00D27;--paper:#FBFAF6;--pink:#1a1a1a;--red:#C8102E;
+--head:"Bricolage Grotesque","Segoe UI",Helvetica,Arial,sans-serif;--mono:"Courier Prime","Courier New",monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14213D;--ink:#EEF2F7;--mute:#a9b6cb;--line:#33466b;--link:#ff8f8f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14213D;--ink:#EEF2F7;--mute:#a9b6cb;--line:#33466b;--link:#ff8f8f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--head);-webkit-font-smoothing:antialiased}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.top b{font-weight:800;font-size:18px}
+.lang button{font:inherit;font-size:15px;background:none;color:var(--ink);border:1px solid var(--line);padding:6px 14px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.lang button:first-child{border-radius:6px 0 0 6px}.lang button:last-child{border-radius:0 6px 6px 0;border-left:0}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:40px 0 72px}
+h1{font-size:clamp(44px,7vw,84px);line-height:.98;letter-spacing:-.03em;margin:0 0 20px;font-weight:800}
+.lead{font-size:20px;color:var(--mute);max-width:34ch;margin:0 0 24px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.cta a{padding:12px 20px;border-radius:6px;text-decoration:none;font-weight:600;border:1px solid var(--ink);color:var(--ink)}
+.cta a.p{background:var(--ink);color:var(--bg)}
+.receipt{background:var(--paper);color:var(--pink);font:15px/1.5 var(--mono);padding:28px 26px 44px;max-width:400px;justify-self:center;width:100%;
+transform:rotate(1.5deg);box-shadow:0 18px 40px rgba(0,0,0,.25);
+-webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/16px 100%}
+.receipt h2{font:700 20px var(--mono);text-align:center;margin:0}
+.receipt .c{text-align:center;margin:0 0 10px}
+.receipt hr{border:0;border-top:2px dashed #999;margin:12px 0}
+.receipt .r{display:flex;justify-content:space-between;gap:12px}
+.receipt .t{font-weight:700;font-size:17px;color:var(--red)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2.s{font-size:32px;letter-spacing:-.02em;margin:0 0 28px;font-weight:800}
+.proj{display:grid;grid-template-columns:240px 1fr;gap:8px 40px;padding:22px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj h3{margin:0;font-size:22px;font-weight:600}
+.stack{color:var(--mute);font-size:15px;margin-top:4px}
+.proj p{margin:0 0 6px;max-width:62ch}
+.metric{font-weight:600;color:var(--link)}
+.tl{border-left:3px solid var(--ink);padding-left:24px;max-width:72ch}
+.tl h3{margin:0;font-size:22px}.tl .meta{color:var(--mute);margin:2px 0 14px}
+.tl li{margin-bottom:10px}
+dl{display:grid;grid-template-columns:200px 1fr;gap:12px 40px;margin:0}
+dt{font-weight:600}dd{margin:0;color:var(--mute)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two h3{margin:0 0 6px;font-size:20px}.two p{margin:0 0 14px;color:var(--mute)}
+footer{padding:40px 0 56px;border-top:1px solid var(--line);color:var(--mute);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:36px}.proj,dl,.two{grid-template-columns:1fr}.proj{gap:6px}dl{gap:2px}dd{margin-bottom:12px}.receipt{transform:none}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--red);z-index:40}
+html{scroll-behavior:smooth}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);flex-wrap:wrap;gap:12px;padding:12px 0;border-bottom:1px solid transparent;transition:border-color .2s}
+.top.s{border-bottom-color:var(--line)}
+.top nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+.top nav a{padding:6px 12px;border-radius:6px;color:var(--mute);text-decoration:none;font-size:15px;white-space:nowrap}
+.top nav a:hover{color:var(--ink)}
+.top nav a[aria-current="true"]{color:var(--ink);background:color-mix(in srgb,var(--ink) 10%,transparent);font-weight:600}
+.ctl{display:flex;gap:10px;align-items:center}
+#th,#cp{font:inherit;font-size:15px;background:none;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+#cp{padding:12px 20px;border-color:var(--ink);font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(4,auto);gap:12px 28px;margin-top:36px;justify-content:start}
+.stats b{display:block;font-size:30px;line-height:1;font-weight:800}
+.stats span{font-size:14px;color:var(--mute);display:block;max-width:14ch;margin-top:4px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:-8px 0 20px}
+.chips button{font:inherit;font-size:15px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.proj{display:block;padding:0}
+.ph{width:100%;display:grid;grid-template-columns:240px 1fr 24px;gap:6px 40px;align-items:center;padding:20px 8px;cursor:pointer;background:none;border:0;font:inherit;color:inherit;text-align:left}
+.ph:hover{background:color-mix(in srgb,var(--ink) 6%,transparent)}
+.ph .metric{font-size:16px}
+.chev{transition:transform .25s;justify-self:end}
+.proj.open .chev{transform:rotate(180deg)}
+.pb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.proj.open .pb{grid-template-rows:1fr}
+.pb>div{overflow:hidden}
+.pb p{margin:0;padding:0 8px 22px;max-width:68ch}
+.pr{opacity:0;transform:translateY(-6px);transition:opacity .3s,transform .3s}
+.pr.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pr{opacity:1;transform:none;transition:none}.pb,.chev{transition:none}}
+@media(max-width:640px){.top nav{order:3;width:100%;margin-left:0}.stats{grid-template-columns:1fr 1fr}.ph{grid-template-columns:1fr 24px}.ph .metric{grid-row:2;grid-column:1}.ph .chev{grid-row:1;grid-column:2}}
+.cf{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px}
+.cf label{display:grid;gap:6px;font-weight:600;font-size:15px}.cf .w{grid-column:1/-1}
+.cf input,.cf textarea{font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.cf button{grid-column:1/-1;justify-self:start;font:inherit;font-weight:600;padding:12px 24px;border-radius:6px;border:1px solid var(--ink);background:var(--ink);color:var(--bg);cursor:pointer}
+.hint{grid-column:1/-1;margin:0;color:var(--mute);font-size:14px}
+.lk a{margin-right:18px;font-weight:600}
+@media(max-width:640px){.cf{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div id="bar"></div>
+<div class="top"><b>SB</b><nav aria-label="Sections"><a href="#work" data-t="hp"></a><a href="#exp-s" data-t="he"></a><a href="#skills" data-t="hs"></a><a href="#about" data-t="hed"></a><a href="#contact" data-t="hc"></a></nav><div class="ctl"><button id="th" aria-label="Theme">◐</button><div class="lang" role="group" aria-label="Language"><button data-l="en" aria-pressed="true">EN</button><button data-l="fr" aria-pressed="false">FR</button></div></div></div>
+
+<header class="hero">
+<div>
+<h1>Sami Bousrih</h1>
+<p class="lead" data-t="lead"></p>
+<div class="cta"><a class="p" href="mailto:sami.bousrih@gmail.com" data-t="mail"></a><button id="cp" data-t="cp"></button><a href="https://www.linkedin.com/in/bousrih-sami-4511a2425/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/sami239" target="_blank" rel="noopener">GitHub</a></div>
+<div class="stats" id="stats"></div>
+</div>
+<div class="receipt" aria-label="Skills summary">
+<h2>SAMI BOUSRIH</h2>
+<p class="c" data-t="rc"></p>
+<hr>
+<div class="r"><span>React · Next.js</span><span>Frontend</span></div>
+<div class="r"><span>Node.js · PHP · C#</span><span>Backend</span></div>
+<div class="r"><span>SQL · PostgreSQL · MongoDB</span><span>Data</span></div>
+<div class="r"><span>LangChain · RAG</span><span>AI</span></div>
+<div class="r"><span>REST · JWT · Webhooks</span><span>API</span></div>
+<hr>
+<div class="r t"><span data-t="rt"></span><span>2024–</span></div>
+<p class="c" style="margin-top:14px" data-t="rf"></p>
+</div>
+</header>
+
+<section id="work"><h2 class="s" data-t="hp"></h2><div class="chips" id="chips" role="group"></div><div id="projects"></div></section>
+
+<section id="exp-s"><h2 class="s" data-t="he"></h2>
+<div class="tl"><h3>Tictaac</h3><p class="meta" data-t="em"></p><ul id="exp"></ul></div></section>
+
+<section id="skills"><h2 class="s" data-t="hs"></h2>
+<dl>
+<dt>Frontend</dt><dd>React, Next.js, JavaScript, TypeScript, HTML5, CSS3, SEO</dd>
+<dt>Backend</dt><dd>Node.js, Express.js, PHP (CodeIgniter), Python, C#</dd>
+<dt data-t="db"></dt><dd>MySQL, PostgreSQL, MongoDB</dd>
+<dt>API</dt><dd>REST, JWT, Webhooks, SMS, WhatsApp Business API, PrestaShop</dd>
+<dt data-t="ai"></dt><dd>LangChain, LLM APIs, RAG, few-shot / zero-shot prompting</dd>
+<dt data-t="tl"></dt><dd>Git, Docker, Linux, Postman, Agile / Scrum</dd>
+</dl></section>
+
+<section class="two" id="about">
+<div><h2 class="s" data-t="hed"></h2><h3 data-t="deg"></h3><p>EPI, École Polytechnique Internationale, Sousse · 2019–2024</p><h3 data-t="cert"></h3><p>Generative AI, NVIDIA (GoMyCode)</p></div>
+<div><h2 class="s" data-t="hl"></h2><h3 data-t="ar"></h3><p data-t="arl"></p><h3 data-t="fr"></h3><p data-t="frl"></p><h3 data-t="en"></h3><p data-t="enl"></p></div>
+</section>
+
+<section id="contact"><h2 class="s" data-t="hc"></h2>
+<form id="cf" class="cf"><label><span data-t="fn"></span><input name="n" required autocomplete="name"></label><label><span data-t="fe"></span><input name="e" type="email" required autocomplete="email"></label><label class="w"><span data-t="fm"></span><textarea name="m" rows="5" required></textarea></label><button type="submit" data-t="fs"></button><p class="hint" data-t="fh"></p></form></section>
+<footer><span>sami.bousrih@gmail.com · +216 28 685 291 · Tunisia</span><a href="https://www.linkedin.com/in/bousrih-sami-4511a2425/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/sami239" target="_blank" rel="noopener">GitHub</a></footer>
+</div>
+
+<script>
+var L={
+en:{lead:"I build business web apps and point-of-sale software, from the database to the screen.",mail:"Email me",rc:"Full-Stack Software Engineer",rt:"TOTAL",rf:"THANK YOU FOR VISITING",
+hp:"Selected work",he:"Experience",em:"Full-Stack Software Engineer · 2024 – present · Tunisia",hs:"Skills",db:"Databases",ai:"AI and LLM",tl:"Tools and methods",
+hed:"Education",deg:"Engineering Degree in Software Engineering",cert:"Certification",hl:"Languages",ar:"Arabic",arl:"Native",fr:"French",frl:"Fluent",en:"English",enl:"Professional"},
+fr:{lead:"Je conçois des applications web métiers et des logiciels de caisse, de la base de données à l’écran.",mail:"M’écrire",rc:"Ingénieur Logiciel Full-Stack",rt:"TOTAL",rf:"MERCI DE VOTRE VISITE",
+hp:"Réalisations",he:"Expérience",em:"Ingénieur Logiciel Full-Stack · 2024 – aujourd’hui · Tunisie",hs:"Compétences",db:"Bases de données",ai:"IA et LLM",tl:"Outils et méthodes",
+hed:"Formation",deg:"Diplôme d’Ingénieur en Génie Logiciel",cert:"Certification",hl:"Langues",ar:"Arabe",arl:"Langue maternelle",fr:"Français",frl:"Courant",en:"Anglais",enl:"Professionnel"}};
+var P=[
+{n:"TictaacPOS",s:"C#, PostgreSQL, REST API",
+d:{en:"Migrated a retail POS from WinDev to C#. Offline-capable sales with safe sync to the server, cash sessions with Z-closing, multi-payment, configurable receipts, and product variants with stock per size.",fr:"Migration d’une caisse de WinDev vers C#. Ventes hors ligne avec synchronisation sécurisée, sessions de caisse avec clôture Z, paiement multiple, tickets configurables et déclinaisons avec stock par taille."},
+m:{en:"Automated tests on VAT, discounts, returns and rounding",fr:"Tests automatisés : TVA, remises, retours et arrondis"}},
+{n:"PaieSoft",s:"C#, ERP integration, Android",
+d:{en:"Payroll software following Tunisian rules, with timekeeping, leave approval, supervisors and ERP links.",fr:"Logiciel de paie conforme aux règles tunisiennes : pointage, validation des congés, superviseurs et liaison ERP."},
+m:{en:"1,000+ automated tests",fr:"Plus de 1 000 tests automatisés"}},
+{n:"Logistics Platform",s:"Next.js, Node.js, MySQL, JWT",
+d:{en:"Parcel and user management with a full admin dashboard and a secure REST API.",fr:"Gestion des colis et des utilisateurs avec tableau de bord d’administration et API REST sécurisée."},
+m:{en:"Response time reduced by 35%",fr:"Temps de réponse réduit de 35 %"}},
+{n:"TicApps Dist / Tirbiha",s:"Next.js, Node.js, MongoDB",
+d:{en:"Supervision platform for field sales: sessions, stock, cash closing, tours on a map, and WhatsApp/SMS verification.",fr:"Plateforme de supervision des ventes terrain : sessions, stock, clôture, tournées sur carte et vérification WhatsApp/SMS."},
+m:{en:"One unified backend replacing two",fr:"Un backend unifié remplace deux"}},
+{n:"AI PDF Assistant",s:"Python, LangChain, LLM APIs",
+d:{en:"Web app that extracts and analyzes PDF content with LLMs, using RAG and prompting techniques.",fr:"Application web d’extraction et d’analyse de PDF par LLM, avec RAG et techniques de prompting."},
+m:{en:"Answer accuracy improved by 40%",fr:"Précision des réponses améliorée de 40 %"}},
+{n:"PrestaShop Integration",s:"PrestaShop, REST, Webhooks",
+d:{en:"Automatic synchronization between internal systems and the online shop.",fr:"Synchronisation automatique entre les systèmes internes et la boutique en ligne."},
+m:{en:"Sync errors reduced by 50%",fr:"Erreurs de synchronisation réduites de 50 %"}},
+{n:"Repair Management System",s:"PHP (CodeIgniter), MySQL",
+d:{en:"Manages repairs, stock and customers with MVC architecture and secure login.",fr:"Gestion des réparations, du stock et des clients, en architecture MVC avec authentification sécurisée."},
+m:{en:"Operational workload reduced by 30%",fr:"Charge opérationnelle réduite de 30 %"}}];
+var E={
+en:["Migrated and redesigned the POS application from WinDev to C#, and built an HR management solution.","Designed secure REST APIs (JWT) and relational and NoSQL databases.","Integrated SMS, WhatsApp and e-commerce services (PrestaShop).","Fixed critical bugs, refactored code and improved front-end and back-end performance.","Worked in an Agile/Scrum team with Git."],
+fr:["Migration et refonte de la caisse de WinDev vers C#, et développement d’une solution de gestion RH.","Conception d’API REST sécurisées (JWT) et de bases relationnelles et NoSQL.","Intégration de services SMS, WhatsApp et e-commerce (PrestaShop).","Correction de bugs critiques, refactoring et optimisation des performances front-end et back-end.","Travail en équipe Agile/Scrum avec Git."]};
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;return e}
+function render(l){
+document.documentElement.lang=l;
+document.querySelectorAll("[data-t]").forEach(function(n){n.textContent=L[l][n.getAttribute("data-t")]});
+drawProjects();drawStats();
+var ex=document.getElementById("exp");ex.textContent="";E[l].forEach(function(t){ex.appendChild(el("li","",t))});
+document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===l)});
+document.title="Sami Bousrih – "+L[l].rc}
+document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){render(b.dataset.l)})});
+var G={"TictaacPOS":"desk","PaieSoft":"desk","Logistics Platform":"web","TicApps Dist / Tirbiha":"web","AI PDF Assistant":"ai","PrestaShop Integration":"web","Repair Management System":"web"};
+var LB={en:{all:"All",desk:"Desktop",web:"Web",ai:"AI"},fr:{all:"Tous",desk:"Bureau",web:"Web",ai:"IA"}};
+var ST={en:[[35,"%","lower response time"],[40,"%","better answer accuracy"],[50,"%","fewer sync errors"],[1000,"+","automated tests"]],fr:[[35,"%","temps de réponse en moins"],[40,"%","précision accrue"],[50,"%","erreurs de synchro en moins"],[1000,"+","tests automatisés"]]};
+L.en.cp="Copy email";L.fr.cp="Copier l’e-mail";
+L.en.hc="Contact";L.en.fn="Your name";L.en.fe="Your email";L.en.fm="Message";L.en.fs="Send message";L.en.fh="This opens your email app with the message ready to send.";
+L.fr.hc="Contact";L.fr.fn="Votre nom";L.fr.fe="Votre e-mail";L.fr.fm="Message";L.fr.fs="Envoyer le message";L.fr.fh="Cela ouvre votre application e-mail avec le message prêt à envoyer.";
+var F="all",O={"TictaacPOS":1},root=document.documentElement;
+function drawProjects(){var l=root.lang,pr=document.getElementById("projects"),cs=document.getElementById("chips");pr.textContent="";cs.textContent="";
+["all","desk","web","ai"].forEach(function(k){var b=el("button","",LB[l][k]);b.setAttribute("aria-pressed",F===k);b.onclick=function(){F=k;drawProjects()};cs.appendChild(b)});
+P.forEach(function(p){if(F!=="all"&&G[p.n]!==F)return;var r=el("div","proj"+(O[p.n]?" open":"")),h=el("button","ph"),a=el("div");
+a.appendChild(el("h3","",p.n));a.appendChild(el("div","stack",p.s));h.appendChild(a);h.appendChild(el("span","metric",p.m[l]));h.appendChild(el("span","chev","▾"));
+h.setAttribute("aria-expanded",!!O[p.n]);var b=el("div","pb"),i=el("div");i.appendChild(el("p","",p.d[l]));if(p.u){var q=el("p","lk");p.u.forEach(function(x){var a2=el("a","",x[0]+" ↗");a2.href=x[1];a2.target="_blank";a2.rel="noopener";q.appendChild(a2)});i.appendChild(q)}b.appendChild(i);
+h.onclick=function(){O[p.n]=!O[p.n];r.classList.toggle("open",!!O[p.n]);h.setAttribute("aria-expanded",!!O[p.n])};
+r.appendChild(h);r.appendChild(b);pr.appendChild(r)})}
+function drawStats(){var s=document.getElementById("stats");s.textContent="";ST[root.lang].forEach(function(x){var d=el("div"),b=el("b");b.dataset.n=x[0];b.dataset.u=x[1];b.textContent=x[0]+x[1];d.appendChild(b);d.appendChild(el("span","",x[2]));s.appendChild(d)})}
+function countUp(){if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;document.querySelectorAll("#stats b").forEach(function(b){var n=+b.dataset.n,u=b.dataset.u,t0=null;function f(t){if(!t0)t0=t;var k=Math.min((t-t0)/1200,1);b.textContent=Math.round(n*(1-Math.pow(1-k,3)))+u;if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)})}
+document.getElementById("th").onclick=function(){var cur=root.dataset.theme||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"),nx=cur==="dark"?"light":"dark";root.dataset.theme=nx;try{localStorage.setItem("th",nx)}catch(e){}};
+try{var sv=localStorage.getItem("th");if(sv)root.dataset.theme=sv}catch(e){}
+document.getElementById("cp").onclick=function(){var b=this,m="sami.bousrih@gmail.com";if(!navigator.clipboard){location.href="mailto:"+m;return}navigator.clipboard.writeText(m).then(function(){b.textContent=root.lang==="fr"?"Copié ✓":"Copied ✓";setTimeout(function(){b.textContent=L[root.lang].cp},1800)},function(){location.href="mailto:"+m})};
+var bar=document.getElementById("bar"),tb=document.querySelector(".top");
+addEventListener("scroll",function(){var h=document.documentElement;bar.style.width=(h.scrollTop/((h.scrollHeight-h.clientHeight)||1)*100)+"%";tb.classList.toggle("s",h.scrollTop>10)},{passive:true});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)document.querySelectorAll(".top nav a").forEach(function(a){a.setAttribute("aria-current",a.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section[id]").forEach(function(s){io.observe(s)});
+var rc=document.querySelectorAll(".receipt>*");rc.forEach(function(n,i){n.classList.add("pr");n.style.transitionDelay=i*110+"ms"});
+render((navigator.language||"en").slice(0,2)==="fr"?"fr":"en");
+document.getElementById("cf").onsubmit=function(e){e.preventDefault();var f=e.target,s=(root.lang==="fr"?"Message du portfolio – ":"Portfolio message – ")+f.n.value,b=f.m.value+"\n\n"+f.n.value+" <"+f.e.value+">";location.href="mailto:sami.bousrih@gmail.com?subject="+encodeURIComponent(s)+"&body="+encodeURIComponent(b)};
+setTimeout(function(){rc.forEach(function(n){n.classList.add("on")});countUp()},150);
+</script>
+</body>
+</html>
